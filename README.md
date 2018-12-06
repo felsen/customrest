@@ -1,2 +1,3 @@
-# customrest
-Simple REST cleint
+# Python REST Client
+ 
+Simple REST client
