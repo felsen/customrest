@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 
+import requests
 from typing import Optional, List, Dict
 
 
@@ -31,8 +32,9 @@ class RESTClientObject(object):
         self.username = username
         self.password = password
         self.port = port
-        self.headers = headers
         self.timeout = timeout
+        self.session = requests.session()
+        self.session.headers = headers if headers is not None else None
 
 
     def __enter__(self):
